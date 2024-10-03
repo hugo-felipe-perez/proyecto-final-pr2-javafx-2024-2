@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="629.0" prefWidth="838.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.marketplacefx.marketplaceapp.controller.MarketplaceController">
+   <children>
+      <SplitPane dividerPositions="0.5996810207336523" orientation="VERTICAL" prefHeight="629.0" prefWidth="842.0" style="-fx-background-color: #202020;">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <Button fx:id="btnAgregarCliente" layoutX="348.0" layoutY="318.0" mnemonicParsing="false" onAction="#onAgregarCliente" text="Agregar cliente" />
+                  <Label layoutX="30.0" layoutY="14.0" text="Informacion del cliente" textFill="WHITE" />
+                  <TextField fx:id="txtNombre" layoutX="121.0" layoutY="101.0" />
+                  <Label layoutX="30.0" layoutY="107.0" text="Nombre:" textFill="WHITE" />
+                  <Separator layoutX="8.0" layoutY="51.0" prefHeight="4.0" prefWidth="824.0" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
