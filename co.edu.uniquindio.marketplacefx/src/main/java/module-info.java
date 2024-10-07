@@ -8,7 +8,7 @@ module co.edu.uniquindio.marketplacefx.marketplaceapp {
     opens co.edu.uniquindio.marketplacefx.marketplaceapp.controller to javafx.fxml;
     exports co.edu.uniquindio.marketplacefx.marketplaceapp.controller;
     opens co.edu.uniquindio.marketplacefx.marketplaceapp.viewcontroller to javafx.fxml;
-    
+
 
 
 
