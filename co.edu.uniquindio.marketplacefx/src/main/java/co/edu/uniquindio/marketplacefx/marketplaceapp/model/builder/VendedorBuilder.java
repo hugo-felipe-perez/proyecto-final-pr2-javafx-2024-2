@@ -1,36 +1,49 @@
 package co.edu.uniquindio.marketplacefx.marketplaceapp.model.builder;
 
-import co.edu.uniquindio.marketplacefx.marketplaceapp.model.Muro;
-import co.edu.uniquindio.marketplacefx.marketplaceapp.model.Producto;
-import co.edu.uniquindio.marketplacefx.marketplaceapp.model.Usuario;
+
+import co.edu.uniquindio.marketplacefx.marketplaceapp.enums.Rol;
 import co.edu.uniquindio.marketplacefx.marketplaceapp.model.Vendedor;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class VendedorBuilder {
+    protected   String nombres;
+    protected String apellidos;
+    protected String cedula;
+    protected String direccion;
+    protected String usuario;
+    protected String contraseña;
+    protected Rol rol;
 
-    private List<Producto> productos = new ArrayList<>();
-    private List <Vendedor> vendedoresAliados = new ArrayList<>();
-    private Muro muro;
-
-    public VendedorBuilder productos(List<Producto> productos) {
-        this.productos = productos;
+    public VendedorBuilder nombres(String nombres){
+        this.nombres=nombres;
         return this;
     }
-
-    public VendedorBuilder vendedoresAliados(List<Vendedor> vendedoresAliados) {
-        this.vendedoresAliados = vendedoresAliados;
+    public VendedorBuilder apellidos(String apellidos){
+        this.apellidos=apellidos;
+        return  this;
+    }
+    public VendedorBuilder cedula(String cedula){
+        this.cedula=cedula;
         return this;
     }
-
-    public VendedorBuilder muro(Muro muro) {
-        this.muro = muro;
+    public VendedorBuilder direccion(String direccion){
+        this.direccion=direccion;
         return this;
     }
-
-    public Vendedor build() {
-        return new Vendedor(productos,vendedoresAliados,muro);
+    public VendedorBuilder usuario(String usuario){
+        this.usuario=usuario;
+        return this;
     }
+    public VendedorBuilder contraseña(String contraseña){
+        this.contraseña=contraseña;
+        return this;
+    }
+    public VendedorBuilder rol(Rol rol){
+        this.rol=rol;
+        return this;
+    }
+    public Vendedor build(){
+        return new Vendedor(nombres, apellidos, cedula, direccion, usuario, contraseña, rol);
 
+    }
 }
+

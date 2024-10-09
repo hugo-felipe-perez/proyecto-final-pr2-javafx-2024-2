@@ -2,18 +2,18 @@ package co.edu.uniquindio.marketplacefx.marketplaceapp.model.builder;
 
 import co.edu.uniquindio.marketplacefx.marketplaceapp.enums.Rol;
 import co.edu.uniquindio.marketplacefx.marketplaceapp.model.Persona;
-import co.edu.uniquindio.marketplacefx.marketplaceapp.model.Usuario;
+import co.edu.uniquindio.marketplacefx.marketplaceapp.model.Vendedor;
+
 
 public class PersonaBuilder {
 
-    private String nombres;
-    private String apellidos;
-    private String cedula;
-    private String direccion;
-    private String usuario;
-    private String contraseña;
-    private Usuario usuarioAsociado;
-    private Rol rol;
+    protected String nombres;
+    protected String apellidos;
+    protected String cedula;
+    protected String direccion;
+    protected String usuario;
+    protected String contraseña;
+    protected Rol rol;
 
     public PersonaBuilder nombres(String nombres) {
         this.nombres = nombres;
@@ -45,17 +45,15 @@ public class PersonaBuilder {
         return this;
     }
 
-    public PersonaBuilder usuarioAsociado(Usuario usuarioAsociado) {
-        this.usuarioAsociado = usuarioAsociado;
-        return this;
-    }
-
     public PersonaBuilder rol(Rol rol) {
         this.rol = rol;
         return this;
     }
 
     public Persona build(){
-        return new Persona(nombres,apellidos,cedula,direccion,usuario,contraseña,usuarioAsociado,rol);
+        return new Persona(nombres, apellidos, cedula, direccion, usuario, contraseña, rol) {
+        };
+
     }
+
 }

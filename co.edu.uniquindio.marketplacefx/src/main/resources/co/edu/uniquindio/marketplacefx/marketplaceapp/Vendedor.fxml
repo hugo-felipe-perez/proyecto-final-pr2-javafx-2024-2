@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<TabPane prefHeight="678.0" prefWidth="1093.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.marketplacefx.marketplaceapp.viewcontroller.VendedorViewController">
+    <tabs>
+        <Tab text="Estadisticas">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+        </Tab>
+        <Tab text="Agregar Usuario">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                    <children>
+                        <AnchorPane layoutX="20.0" layoutY="14.0" prefHeight="616.0" prefWidth="1058.0">
+                            <children>
+                                <SplitPane dividerPositions="0.04132231404958678, 0.4677685950413223" layoutX="11.0" layoutY="-1.0" orientation="VERTICAL" prefHeight="612.0" prefWidth="1035.0">
+                                    <items>
+                                        <Label text="Registrar Usuario">
+                                            <font>
+                                                <Font name="Cambria Math" size="41.0" />
+                                            </font>
+                                        </Label>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="232.0" prefWidth="1033.0">
+                                            <children>
+                                                <Button fx:id="btnAgregar" layoutX="111.0" layoutY="194.0" mnemonicParsing="false" onAction="#onAgregarUsuario" prefHeight="29.0" prefWidth="195.0" text="Agregar" />
+                                                <Button fx:id="btnActualizar" layoutX="427.0" layoutY="194.0" mnemonicParsing="false" onAction="#onActualizarUsuario" prefHeight="28.0" prefWidth="179.0" text="Actualizar" />
+                                                <Button fx:id="btnEliminar" layoutX="757.0" layoutY="194.0" mnemonicParsing="false" onAction="#onEliminarUsuario" prefHeight="31.0" prefWidth="155.0" text="Eliminar" />
+                                                <Label layoutX="18.0" layoutY="19.0" text="Nombre" />
+                                                <Label layoutX="18.0" layoutY="85.0" text="Cedula" />
+                                                <Label layoutX="461.0" layoutY="85.0" text="Direccion" />
+                                                <Label layoutX="21.0" layoutY="145.0" text="Usuario" />
+                                                <TextField fx:id="txtNombre" layoutX="111.0" layoutY="19.0" />
+                                                <TextField fx:id="txtCedula" layoutX="111.0" layoutY="79.0" />
+                                                <TextField fx:id="txtDireccion" layoutX="570.0" layoutY="79.0" />
+                                                <TextField fx:id="txtUsuario" layoutX="111.0" layoutY="139.0" />
+                                                <Label layoutX="461.0" layoutY="25.0" text="Apellido" />
+                                                <Label layoutX="461.0" layoutY="145.0" text="Contrasena" />
+                                                <PasswordField fx:id="txtContrasena" layoutX="570.0" layoutY="139.0" />
+                                                <TextField fx:id="txtApellidos" layoutX="570.0" layoutY="19.0" />
+                                                <Separator layoutX="3.0" layoutY="188.0" prefHeight="0.0" prefWidth="1029.0" />
+                                            </children>
+                                        </AnchorPane>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="0.0" prefWidth="1033.0">
+                                            <children>
+                                                <TableView fx:id="tableUsuarios" layoutX="14.0" layoutY="9.0" prefHeight="417.0" prefWidth="1008.0">
+                                                    <columns>
+                                                        <TableColumn fx:id="tcNombre" prefWidth="178.0" text="Nombre" />
+                                                        <TableColumn fx:id="tcApellidos" prefWidth="152.0" text="Apellido" />
+                                                        <TableColumn fx:id="tcCedula" prefWidth="157.0" text="Cedula" />
+                                                        <TableColumn fx:id="tcDireccion" prefWidth="187.0" text="Direccion" />
+                                                        <TableColumn fx:id="tcUsuario" prefWidth="194.0" text="Usuario" />
+                                                        <TableColumn fx:id="tcContrasena" prefWidth="139.0" text="Contrasena" />
+                                                    </columns>
+                                                </TableView>
+                                            </children>
+                                        </AnchorPane>
+                                    </items>
+                                </SplitPane>
+                            </children>
+                        </AnchorPane>
+                    </children>
+                </AnchorPane>
+            </content>
+        </Tab>
+    </tabs>
+</TabPane>

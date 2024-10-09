@@ -1,50 +1,31 @@
 package co.edu.uniquindio.marketplacefx.marketplaceapp.model;
 
 import co.edu.uniquindio.marketplacefx.marketplaceapp.enums.Rol;
+import co.edu.uniquindio.marketplacefx.marketplaceapp.model.builder.VendedorBuilder;
 
-import java.util.ArrayList;
-import java.util.List;
+public class Vendedor extends Persona {
 
-public class Vendedor extends Persona{
 
-    private List <Producto> productos = new ArrayList<>();
-    private List <Vendedor> vendedoresAliados = new ArrayList<>();
-    private Muro muro;
+    public Vendedor(String nombres, String apellidos, String cedula, String direccion, String usuario, String contraseña, Rol rol) {
+        super(nombres, apellidos, cedula, direccion, usuario, contraseña, rol);
 
-    public Vendedor(String nombres,
-                    String apellidos,
-                    String cedula,
-                    String direccion,
-                    String usuario,
-                    String contraseña,
-                    Usuario usuarioAsociado,
-                    Rol rol,
-                    List<Producto> productos,
-                    List<Vendedor> vendedoresAliados,
-                    Muro muro) {
-        super(nombres, apellidos, cedula, direccion, usuario, contraseña, usuarioAsociado, rol);
-        this.productos = productos;
-        this.vendedoresAliados = vendedoresAliados;
-        this.muro = muro;
     }
 
-    public Vendedor(List<Producto> productos,
-                    List<Vendedor> vendedoresAliados,
-                    Muro muro) {
-        this.productos = productos;
-        this.vendedoresAliados = vendedoresAliados;
-        this.muro = muro;
+    // Método estático para acceder al builder de Vendedor
+    public static VendedorBuilder builder() {
+        return new VendedorBuilder();
     }
 
-    public List<Producto> getProductos() {
-        return productos;
-    }
-
-    public List<Vendedor> getVendedoresAliados() {
-        return vendedoresAliados;
-    }
-
-    public Muro getMuro() {
-        return muro;
+    @Override
+    public String toString() {
+        return "Vendedor{" +
+                "nombres='" + getNombres() + '\'' +
+                ", apellidos='" + getApellidos() + '\'' +
+                ", cedula='" + getCedula() + '\'' +
+                ", direccion='" + getDireccion() + '\'' +
+                ", usuario='" + getUsuario() + '\'' +
+                ", contraseña='" + getContraseña() + '\'' +
+                ", rol=" + getRol() +
+                '}';
     }
 }

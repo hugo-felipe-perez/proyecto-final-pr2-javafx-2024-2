@@ -16,17 +16,6 @@ public class MarketplaceController {
     private URL location;
 
     @FXML
-    private TextField txtNombre;
-
-    @FXML
-    private Button btnAgregarCliente;
-
-    @FXML
-    void onAgregarCliente(ActionEvent event) {
-        System.out.println("Agregando Cliente");
-    }
-
-    @FXML
     void initialize() {
     }
 }
